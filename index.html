@@ -6,8 +6,13 @@
   <title>jQuery Tailwind Checkbox Toggle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-solarizedlight.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.2/tailwind.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <style>
+    :not(pre)>code[class*=language-], pre[class*=language-] { background: rgba(0,0,0,0.25); }
+  </style>
 
 </head>
 <body class="py-16 bg-black text-grey leading-tight">
@@ -39,7 +44,7 @@
       </ul>
       <h3 class="mb-4 p-1 px-2 bg-grey-darkest uppercase opacity-25 rounded">Usage</h3>
         <h5 class="opacity-50">HTML</h5>
-        <pre class="mb-4 p-4 bg-grey-darkest text-sm font-mono overflow-auto rounded">&lt;label
+        <pre><code class="language-html">&lt;label
   class="checkbox-toggle"
   data-rounded="rounded"
   data-handle-size="20"
@@ -47,14 +52,17 @@
   data-off-color="bg-grey"
   data-on-color="bg-blue-light"&gt;
     &lt;input type="checkbox" /&gt;
-&lt;/label&gt;</pre>
+&lt;/label&gt;</code></pre>
 
     </section>
   </main>
 
+  <!-- prism -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markup.min.js"></script>
+  <!-- /prism -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="bootstrap-switch.js"></script>
   <script src="js.js"></script>
 
 </body>
