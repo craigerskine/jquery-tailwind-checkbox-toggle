@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>jQuery Tailwind Checkbox Toggle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.2/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body class="py-16 bg-black text-grey leading-tight">
+
+  <header class="mb-16 text-center">
+      <h1 class="mb-2 text-white font-light">Tailwind Checkbox Toggle</h1>
+      <p class="opacity-50">Straight up jQuery logic and TW syntax. Customizable with data attributes.</p>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-xs">
+      <h3 class="p-1 px-2 bg-grey-darkest uppercase opacity-25 rounded">Demo</h3>
+      <ul class="list-reset mb-16">
+        <li class="py-4 flex items-center"><label for="some-ch1" class="pr-4 w-1/2 text-right">Normal</label> <label class="checkbox-toggle"><input type="checkbox" id="some-ch1" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch2" class="pr-4 w-1/2 text-right">Checked</label> <label class="checkbox-toggle"><input type="checkbox" id="some-ch2" checked /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch3" class="pr-4 w-1/2 text-right">Styley</label> <label class="checkbox-toggle" data-rounded="rounded-sm" data-handle-color="bg-grey-dark" data-off-color="bg-grey-darkest" data-on-color="bg-grey-lighter"><input type="checkbox" id="some-ch3" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch4" class="pr-4 w-1/2 text-right">Disabled</label> <label class="checkbox-toggle" data-on-color="bg-red-light"><input type="checkbox" id="some-ch4" checked disabled /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch5" class="pr-4 w-1/2 text-right">Smaller</label> <label class="checkbox-toggle" data-handle-size="10"><input type="checkbox" id="some-ch5" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch6" class="pr-4 w-1/2 text-right">Small</label> <label class="checkbox-toggle" data-handle-size="15"><input type="checkbox" id="some-ch6" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch7" class="pr-4 w-1/2 text-right">Bigger</label> <label class="checkbox-toggle" data-handle-size="25"><input type="checkbox" id="some-ch7" /></label></li>
+      </ul>
+      <h3 class="p-1 px-2 bg-grey-darkest uppercase flex items-center opacity-25 rounded">Options <small class="ml-auto font-mono lowercase">data-</small></h3>
+      <ul class="list-reset mb-16 font-mono">
+        <li class="py-4 flex items-center"><b>rounded</b> <small class="ml-auto text-right opacity-50">rounded[-sm, -lg, -full] <small class="block opacity-75">default: rounded-full</small></small></li>
+        <li class="py-4 flex items-center"><b>handle-size</b> <small class="ml-auto text-right opacity-50">int <small class="block opacity-75">default: 20</small></small></li>
+        <li class="py-4 flex items-center"><b>handle-color</b> <small class="ml-auto text-right opacity-50">bg-[<i>color</i>] <small class="block opacity-75">default: bg-white</small></small></li>
+        <li class="py-4 flex items-center"><b>off-color</b> <small class="ml-auto text-right opacity-50">bg-[<i>color</i>] <small class="block opacity-75">default: bg-grey</small></small></li>
+        <li class="py-4 flex items-center"><b>on-color</b> <small class="ml-auto text-right opacity-50">bg-[<i>color</i>] <small class="block opacity-75">default: bg-blue-light</small></small></li>
+      </ul>
+      <h3 class="mb-4 p-1 px-2 bg-grey-darkest uppercase opacity-25 rounded">Usage</h3>
+        <h5 class="opacity-50">HTML</h5>
+        <pre class="mb-4 p-4 bg-grey-darkest text-sm font-mono overflow-auto rounded">&lt;label
+  class="checkbox-toggle"
+  data-rounded="rounded"
+  data-handle-size="20"
+  data-handle-color="bg-white"
+  data-off-color="bg-grey"
+  data-on-color="bg-blue-light"&gt;
+    &lt;input type="checkbox" /&gt;
+&lt;/label&gt;</pre>
+
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="bootstrap-switch.js"></script>
+  <script src="js.js"></script>
+
+</body>
+</html>
