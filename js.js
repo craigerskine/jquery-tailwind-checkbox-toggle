@@ -35,7 +35,7 @@ $(function(){
   });
 
   // remote en/disable
-  $('#some-ch3').on('change', function(){
-    $('#some-ch4').prop('disabled', !$(this).is(':checked')).trigger('change');
-  })
+  // $('#some-ch3').on('change', function(){
+  //   $('#some-ch4').prop('disabled', !$(this).is(':checked')).trigger('change');
+  // });
 });
