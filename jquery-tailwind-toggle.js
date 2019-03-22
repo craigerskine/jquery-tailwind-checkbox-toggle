@@ -12,20 +12,24 @@ $(function(){
     var chBoxOnColor = $(this).data('on-color');
     chBoxOnColor = (chBoxOnColor !== undefined) ? chBoxOnColor : 'bg-blue-light';
     $(this)
-    .attr('data-plugin', 'checkbox-toggle')
-    .css({'width': (chBoxHandleSize * 2.5) + 6 +'px', 'padding': '3px', 'transition': 'all .25s'})
-    .addClass(chBoxRounded +' '+ chBoxOffColor +' inline-flex cursor-pointer align-middle')
-    .append('<b class="'+ chBoxHandleColor +' '+ chBoxRounded +' shadow" style="width: '+ chBoxHandleSize +'px; height: '+ chBoxHandleSize +'px; transition: all .25s" />').find('input').addClass('w-px h-px opacity-0 absolute').attr('tabindex', '-1').on('change', function(){
-      if($(this).is(':checked')){
-        $(this).closest('label').removeClass(chBoxOffColor).addClass(chBoxOnColor).find('b').css('transform', 'translate('+ chBoxHandleSize * 1.5 +'px, 0)');
-      } else {
-        $(this).closest('label').removeClass(chBoxOnColor).addClass(chBoxOffColor).find('b').css('transform', '');
-      }
-      if($(this).is(':disabled')){
-        $(this).closest('label').addClass('opacity-25 pointer-events-none');
-      } else {
-        $(this).closest('label').removeClass('opacity-25 pointer-events-none');
-      }
+      .attr('data-plugin', 'checkbox-toggle')
+      .css({'width': (chBoxHandleSize * 2.5) + 6 +'px', 'padding': '3px', 'transition': 'all .25s'})
+      .addClass(chBoxRounded +' '+ chBoxOffColor +' inline-flex cursor-pointer align-middle')
+      .append('<b class="'+ chBoxHandleColor +' '+ chBoxRounded +' shadow" style="width: '+ chBoxHandleSize +'px; height: '+ chBoxHandleSize +'px; transition: all .25s" />')
+      .find('input')
+      .addClass('w-px h-px opacity-0 absolute')
+      .attr('tabindex', '-1')
+      .on('change', function(){
+        if($(this).is(':checked')){
+          $(this).closest('label').removeClass(chBoxOffColor).addClass(chBoxOnColor).find('b').css('transform', 'translate('+ chBoxHandleSize * 1.5 +'px, 0)');
+        } else {
+          $(this).closest('label').removeClass(chBoxOnColor).addClass(chBoxOffColor).find('b').css('transform', '');
+        }
+        if($(this).is(':disabled')){
+          $(this).closest('label').addClass('opacity-25 pointer-events-none');
+        } else {
+          $(this).closest('label').removeClass('opacity-25 pointer-events-none');
+        }
     }).trigger('change');
   });
   $('.checkbox-toggle').attr('tabindex', '0').on('keyup', function(e){
