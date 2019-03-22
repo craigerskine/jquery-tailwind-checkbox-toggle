@@ -30,13 +30,13 @@
     <section class="mx-auto max-w-xs">
       <h3 class="p-1 px-2 bg-grey-darkest uppercase opacity-25 rounded">Demo</h3>
       <ul class="list-reset mb-16">
-        <li class="py-4 flex items-center"><label for="some-ch1" class="pr-4 w-1/2 text-right">Normal</label> <label class="checkbox-toggle"><input type="checkbox" id="some-ch1" /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch2" class="pr-4 w-1/2 text-right">Checked</label> <label class="checkbox-toggle"><input type="checkbox" id="some-ch2" checked /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch3" class="pr-4 w-1/2 text-right">Styley</label> <label class="checkbox-toggle" data-rounded="rounded-sm" data-handle-color="bg-red-lighter" data-off-color="bg-red-darker" data-on-color="bg-red"><input type="checkbox" id="some-ch3" /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch4" class="pr-4 w-1/2 text-right">Disabled</label> <label class="checkbox-toggle"><input type="checkbox" id="some-ch4" checked disabled /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch5" class="pr-4 w-1/2 text-right">Smaller</label> <label class="checkbox-toggle" data-handle-size="10"><input type="checkbox" id="some-ch5" /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch6" class="pr-4 w-1/2 text-right">Small</label> <label class="checkbox-toggle" data-handle-size="15"><input type="checkbox" id="some-ch6" /></label></li>
-        <li class="py-4 flex items-center"><label for="some-ch7" class="pr-4 w-1/2 text-right">Bigger</label> <label class="checkbox-toggle" data-handle-size="25"><input type="checkbox" id="some-ch7" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch1" class="pr-4 w-1/2 text-right">Normal</label> <label data-toggle="checkbox-toggle"><input type="checkbox" id="some-ch1" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch2" class="pr-4 w-1/2 text-right">Checked</label> <label data-toggle="checkbox-toggle"><input type="checkbox" id="some-ch2" checked /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch3" class="pr-4 w-1/2 text-right">Styley</label> <label data-toggle="checkbox-toggle" data-rounded="rounded-sm" data-handle-color="bg-red-lighter" data-off-color="bg-red-darker" data-on-color="bg-red"><input type="checkbox" id="some-ch3" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch4" class="pr-4 w-1/2 text-right">Disabled</label> <label data-toggle="checkbox-toggle"><input type="checkbox" id="some-ch4" checked disabled /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch5" class="pr-4 w-1/2 text-right">Smaller</label> <label data-toggle="checkbox-toggle" data-handle-size="10"><input type="checkbox" id="some-ch5" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch6" class="pr-4 w-1/2 text-right">Small</label> <label data-toggle="checkbox-toggle" data-handle-size="15"><input type="checkbox" id="some-ch6" /></label></li>
+        <li class="py-4 flex items-center"><label for="some-ch7" class="pr-4 w-1/2 text-right">Bigger</label> <label data-toggle="checkbox-toggle" data-handle-size="25"><input type="checkbox" id="some-ch7" /></label></li>
       </ul>
       <h3 class="p-1 px-2 bg-grey-darkest uppercase flex items-center opacity-25 rounded">Options <small class="ml-2 py-px px-2 bg-black text-sm font-mono lowercase rounded-full">data-</small></h3>
       <ul class="list-reset mb-16 font-mono">
@@ -52,12 +52,12 @@
       <pre><code class="language-html">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="jquery-tailwind-toggle.js"&gt;&lt;/script&gt;</code></pre>
       <h5 class="opacity-50">Simple (default options)</h5>
-      <pre><code class="language-html">&lt;label class="checkbox-toggle"&gt;
+      <pre><code class="language-html">&lt;label data-toggle="checkbox-toggle"&gt;
   &lt;input type="checkbox" /&gt;
 &lt;/label&gt;</code></pre>
       <h5 class="opacity-50">All Options</h5>
       <pre><code class="language-html">&lt;label
-  class="checkbox-toggle"
+  data-toggle="checkbox-toggle"
   data-rounded="rounded"
   data-handle-size="20"
   data-handle-color="bg-white"
