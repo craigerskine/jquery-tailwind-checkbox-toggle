@@ -34,8 +34,9 @@ $(function(){
       }).trigger('change');
     }
   });
-  $('[data-toggle="checkbox-toggle"]').attr('tabindex', '0').on('keyup', function(e){
+  $('[data-toggle="checkbox-toggle"]').attr('tabindex', '0').on('keydown', function(e){
     if(e.keyCode == 13 || e.keyCode == 32){
+      e.preventDefault();
       $(this).find('input').click();  
     }
   });
