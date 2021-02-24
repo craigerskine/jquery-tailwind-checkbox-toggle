@@ -21,9 +21,9 @@ $(function(){
         .find('input').addClass('checkbox-toggle-tw w-px h-px opacity-0 absolute').attr('tabindex', '-1')
         .on('change', function(){
           if($(this).is(':checked')){
-            $(this).closest('label').find('i').removeClass(chBoxOffColor).addClass(chBoxOnColor).next('b').css('transform', 'translate('+ chBoxHandleSize * 1 +'px, 0)');
+            $(this).closest('label').find('i').removeClass(chBoxOffColor + ' bg-opacity-50').addClass(chBoxOnColor).next('b').css('transform', 'translate('+ chBoxHandleSize * 1 +'px, 0)');
           } else {
-            $(this).closest('label').find('i').removeClass(chBoxOnColor).addClass(chBoxOffColor).next('b').css('transform', '');
+            $(this).closest('label').find('i').removeClass(chBoxOnColor).addClass(chBoxOffColor + ' bg-opacity-50').next('b').css('transform', '');
           }
           if($(this).is(':disabled')){
             $(this).closest('label').addClass('opacity-25 pointer-events-none');
