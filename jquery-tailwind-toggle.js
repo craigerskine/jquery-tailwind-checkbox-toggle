@@ -16,8 +16,8 @@ $(function(){
         .attr('data-toggle', 'checkbox-toggle')
         .css({'width': (chBoxHandleSize * 2) +'px'})
         .addClass('inline-flex cursor-pointer align-middle relative')
-        .append('<i class="'+ chBoxRounded +' '+ chBoxOffColor +' bg-opacity-50 absolute inset-x-1 top-1/2 transform -translate-y-1/2 transition duration-200' +'" style="height: '+ (chBoxHandleSize / 2) +'px;" />')
-        .append('<b class="'+ chBoxHandleColor +' '+ chBoxRounded +' relative ring-2 ring-black ring-opacity-20 shadow transition-all duration-200" style="width: '+ chBoxHandleSize +'px; height: '+ chBoxHandleSize +'px;" />')
+        .append('<i class="'+ chBoxRounded +' '+ chBoxOffColor +' h-['+ (chBoxHandleSize / 2) +'px] bg-opacity-50 absolute inset-x-1 top-1/2 transform -translate-y-1/2 motion-safe:transition" />')
+        .append('<b class="'+ chBoxHandleColor +' '+ chBoxRounded +' w-['+ chBoxHandleSize +'px] h-['+ chBoxHandleSize +'px] relative ring-2 ring-black ring-opacity-20 shadow motion-safe:transition-all" />')
         .find('input').addClass('checkbox-toggle-tw w-px h-px opacity-0 absolute').attr('tabindex', '-1')
         .on('change', function(){
           if($(this).is(':checked')){
